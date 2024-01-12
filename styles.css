@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    background: url(images/triangles_bgpattern.webp) repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffff;
+    height: 75px;
+}
+
+.primary-red {
+    color: red;
+}
+
+.primary-green {
+    color: green;
+}
+
+header h2 {
+    text-transform: uppercase;
+    padding: 5rem;
+}
+
+header ul {
+    display: flex;
+    /* gap: 3rem; */
+    list-style-type: none;
+}
+
+header ul li {
+    padding: 3rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header ul li a:hover {
+    color: #333;
+}
+
+header ul li a:active {
+    color: #aaa;
+}
+
+header ul li a:visited {
+    color: #000;
+}
