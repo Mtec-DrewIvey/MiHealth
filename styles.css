@@ -1,9 +1,10 @@
+/* Basic CSS Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
+/* Double check img reset below. */
 img {
     max-width: 100%;
 }
@@ -12,6 +13,7 @@ body {
     background: url(images/triangles_bgpattern.webp) repeat;
 }
 
+/* Header styling */
 header {
     display: flex;
     justify-content: space-between;
@@ -59,3 +61,5 @@ header ul li a:active {
 header ul li a:visited {
     color: #000;
 }
+
+/* Body Styling */
