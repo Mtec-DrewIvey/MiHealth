@@ -6,7 +6,7 @@
 }
 
 html {
-    hanging-punctuation: first last;
+    hanging-punctuation: first last; /* Not great support, won't break site though*/
     /* color-scheme: light dark; */
 }
 
@@ -91,13 +91,26 @@ header ul li a:visited {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: auto auto;
 }
 
 .meals {
     display: grid;
+    grid-template-columns: 250px 250px 250px;
     gap: 15px;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 250px 250px 250px;
+}
+
+h3, h4 {
+    display: block;
+}
+
+.white-accent {
+    background-color: #fff;
+    padding: 1rem;
+}
+.green-accent {
+    background-color: lime;
+    padding: 1rem 1rem 1rem 5rem;
 }
