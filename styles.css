@@ -4,13 +4,36 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* Double check img reset below. */
-img {
+
+html {
+    hanging-punctuation: first last;
+    /* color-scheme: light dark; */
+}
+
+img, picture, svg, video {
+    display: block;
     max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    max-width: 50ch; 
+    text-wrap: pretty;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :has(:target) {
+        scroll-behavior: smooth;
+        scroll-padding-top: 2rem;
+    }
 }
 
 body {
     background: url(images/triangles_bgpattern.webp) repeat;
+    min-height: 100svh;
 }
 
 /* Header styling */
@@ -63,3 +86,18 @@ header ul li a:visited {
 }
 
 /* Body Styling */
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.meals {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 250px 250px 250px;
+}
