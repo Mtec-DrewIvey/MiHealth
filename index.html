@@ -5,47 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>MiHealth</title>
+    
 </head>
 <body>
     <!-- Header framework: h2 aligned to left. Nav aligned to right -->
-    <header>
-        <h2><span class="primary-red">Mi</span><span class="primary-green">Health</span></h2>
-        <nav>
-            <ul>
-                <li><a href="#">Breakfast</a></li>
-                <li><a href="#">Lunch</a></li>
-                <li><a href="#">Dinner</a></li>
-                <li><a href="#">Dessert</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header>
+            <h2><span class="primary-red">Mi</span><span class="primary-green">Health</span></h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Breakfast</a></li>
+                    <li><a href="#">Lunch</a></li>
+                    <li><a href="#">Dinner</a></li>
+                    <li><a href="#">Dessert</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <!-- Main body - div container, 2 columns. 3 eq img containers. -->
-    <div class="content-container">
-        <div class="about">
-            <h1>Be Healthy</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nisi nulla assumenda temporibus quisquam consequuntur eius qui nobis earum necessitatibus repudiandae, labore cum minus magni rem. Debitis incidunt laudantium impedit ea quam!</p>
-            <p><span class="upper">Browse Menu &rightarrow;</span></p>
-        </div>
-        <div class="meals">
-            <div class="meal">
-                <img src="images/apple-breakfast.jpeg" alt="bowls with apple breakfast">
-                <h4>Fresh</h4>
-                <h3>Breakfast</h3>
+        <!-- Main body - div container, 2 columns. 3 eq img containers. -->
+        <div class="content-container">
+            <div class="about">
+                <h1>Be Healthy</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nisi nulla assumenda temporibus quisquam consequuntur eius qui nobis earum necessitatibus repudiandae, labore cum minus magni rem. Debitis incidunt laudantium impedit ea quam!</p>
+                <p><span class="upper">Browse Menu &rightarrow;</span></p>
             </div>
-            <div class="meal">
-                <img src="images/pasta-salad.jpeg" alt="Glass bowl of Pasta Salad">
-                <h4>Sweet</h4>
-                <h3>Lunch</h3>
-            </div>
-            <div class="meal">
-                <img src="images/Shrimp-Broccoli.jpeg" alt="Closeup of grilled shrimp on bed of rice and broccoli">
-                <h4><span class="white-accent">Delicious</span></h4>
-                <h3><span class="green-accent">Dinner</span></h3>
+            <div class="meals">
+                <div class="meal">
+                    <img src="images/apple-breakfast.jpeg" alt="bowls with apple breakfast">
+                    <h4>Fresh</h4>
+                    <h3>Breakfast</h3>
+                </div>
+                <div class="meal">
+                    <img src="images/pasta-salad.jpeg" alt="Glass bowl of Pasta Salad">
+                    <h4>Sweet</h4>
+                    <h3>Lunch</h3>
+                </div>
+                <div class="meal" id="dinner">
+                    <!-- <img src="images/Shrimp-Broccoli.jpeg" alt="Closeup of grilled shrimp on bed of rice and broccoli"> -->
+                    <div class="meal-desc">
+                        <h4><span class="white-accent">Delicious</span></h4>
+                    </div>
+                    <div class="meal-name">
+                        <h3><span class="green-accent">Dinner</span></h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    
 
 </body>
 </html>
