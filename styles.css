@@ -32,8 +32,10 @@ p {
 }
 
 body {
+    font-family: 'Roboto', sans-serif, Georgia;
     background: url(images/triangles_bgpattern.webp) repeat;
     min-height: 100svh;
+    overflow: hidden;
 }
 
 /* Header styling */
@@ -61,7 +63,8 @@ header {
 
 header h2 {
     text-transform: uppercase;
-    padding: 5rem;
+    margin-left: 3rem;
+    font-size: 2rem;
 }
 
 header ul {
@@ -79,6 +82,10 @@ header ul li a {
     color: #000;
 }
 
+header ul li a:visited {
+    color: #000;
+}
+
 header ul li a:hover {
     color: #333;
 }
@@ -87,59 +94,67 @@ header ul li a:active {
     color: #aaa;
 }
 
-header ul li a:visited {
-    color: #000;
-}
-
 /* Body Styling */
 
 .content-container {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-wrap: nowrap;
     /* align-items: center; */
     margin: 6.25rem;
 }
 
 .about {
     margin: 0 2rem 2rem 2rem;
+    /* position: relative; */
 }
 
 .about h1 {
     font-size: 3.25rem;
     line-height: 2.9rem;
-    padding: 0 2rem 2rem 0;
+    padding: 0 2rem 0 0;
+    margin: 1rem 0 2rem;
 }
 
 .about p {
-    font-size: 1.125rem;
-    line-height: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.upper {
+    text-transform: uppercase;
 }
 
 .meals {
     position: relative;
     display: grid;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 300px 300px 300px;
     gap: 15px;
-    justify-content: center;
-    align-content: center;
+    /* justify-content: center;
+    align-content: center; */
 }
 
-h3, h4 {
-    display: block;
+.meal {
+    height: 500px;
+    position: relative;
+    /* --__bg-size: cover; */
 }
 
-/* .white-accent {
-    background-color: #fff;
-    padding: 1rem;
+#breakfast {
+    background: url(images/apple-breakfast.jpeg);
+    background-size: cover;
 }
-.green-accent {
-    background-color: lime;
-    padding: 1rem 1rem 1rem 5rem;
-} */
+
+#lunch {
+    background: url(images/pasta-salad.jpeg);
+    background-size: cover;
+}
 
 #dinner {
-    background: url(images/Shrimp-Broccoli.jpeg) no-repeat;
-    /* position: absolute; */
+    background: url(images/Shrimp-Broccoli.jpeg);
+    background-size: cover;
 }
 
 .meal-desc {
