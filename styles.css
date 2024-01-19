@@ -1,3 +1,8 @@
+/* Custom properties for re-used attributes */
+:root {
+    --primary-clr-green: #8cc628;
+}
+
 /* Basic CSS Reset */
 * {
     padding: 0;
@@ -5,30 +10,9 @@
     box-sizing: border-box;
 }
 
-html {
-    hanging-punctuation: first last; /* Not great support, won't break site though*/
-    /* color-scheme: light dark; */
-}
-
-img, picture, svg, video {
-    display: block;
-    max-width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-}
-
 p {
-    max-width: 50ch; 
+    max-width: 40ch; 
     text-wrap: pretty;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    :has(:target) {
-        scroll-behavior: smooth;
-        scroll-padding-top: 2rem;
-    }
 }
 
 body {
@@ -50,31 +34,33 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #ffff;
-    height: 75px;
+}
+
+header > * {
+    margin: 1rem 6rem;
 }
 
 .primary-red {
-    color: red;
+    color: #ce2020;
 }
 
 .primary-green {
-    color: green;
+    color: var(--primary-clr-green)
 }
 
 header h2 {
     text-transform: uppercase;
-    margin-left: 3rem;
     font-size: 2rem;
 }
 
 header ul {
     display: flex;
-    /* gap: 3rem; */
+    gap: 4.5rem;
     list-style-type: none;
 }
 
 header ul li {
-    padding: 3rem;
+    font-weight: 500;
 }
 
 header ul li a {
@@ -101,25 +87,30 @@ header ul li a:active {
     align-items: center;
     flex-grow: 0;
     flex-wrap: nowrap;
-    /* align-items: center; */
-    margin: 6.25rem;
+    margin: 6.25rem 4rem;
 }
 
 .about {
     margin: 0 2rem 2rem 2rem;
-    /* position: relative; */
+    overflow: hidden;
 }
 
-.about h1 {
+h1 {
     font-size: 3.25rem;
     line-height: 2.9rem;
     padding: 0 2rem 0 0;
     margin: 1rem 0 2rem;
+    white-space: wrap;
+}
+
+h1 span::before {
+    content: "\a";
+    white-space: pre;
 }
 
 .about p {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     margin-bottom: 4rem;
 }
 
@@ -129,19 +120,20 @@ header ul li a:active {
 
 .meals {
     position: relative;
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
+    display: flex;
     gap: 15px;
-    /* justify-content: center;
-    align-content: center; */
+    width: 100%;
 }
 
 .meal {
+    flex: 1;
     height: 500px;
+    width: 100%;
     position: relative;
-    /* --__bg-size: cover; */
+    overflow: hidden;
 }
 
+/* Repetative code here - couldn't get background-size to work unless it was directly in provided id */
 #breakfast {
     background: url(images/apple-breakfast.jpeg);
     background-size: cover;
@@ -157,18 +149,21 @@ header ul li a:active {
     background-size: cover;
 }
 
-.meal-desc {
-    position: absolute;
-    bottom: 2.285rem;
-    right: 0;
-    background-color: #fff;
-    padding: .5rem;
-}
-
+.meal-desc,
 .meal-name {
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: lime;
-    padding: .5rem .5rem .5rem 4rem;
+    text-transform: uppercase;
+}
+
+.meal-desc {
+    background-color: #fff;
+    bottom: 2.75rem; /* Override previous bottom position to move this element above .meal-name*/
+    padding: 1rem 1.25rem;
+}
+
+.meal-name {
+    background-color: var(--primary-clr-green);
+    padding: .75rem .75rem .75rem 4rem;
 }
